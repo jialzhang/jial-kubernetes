@@ -32,3 +32,8 @@ kubectl get ingress
 curl  http://10.200.51.50:8190
 
 curl -H Host:traefik.nginx.io http://10.200.51.50:8190
+
+
+
+------------------------------------------------------
+https://kubernetes.io/docs/concepts/services-networking/ingress/
