@@ -17,12 +17,18 @@ ingress.extensions/traefik-web-ui created
 
 kubectl get node --show-labels
 
-#给node 10.200.52.133 打labels
+#给node 10.200.51.50 打labels
 
-kubectl label node 10.200.52.133 traefik=traefik
+kubectl label node 10.200.51.50 traefik=traefik
 
 #查看traefik-ingress-controller是否创建
 
 kubectl -n kube-system get pod 
 
+##
 
+kubectl get ingress
+
+curl  http://10.200.51.50:8190
+
+curl -H Host:traefik.nginx.io http://10.200.51.50:8190

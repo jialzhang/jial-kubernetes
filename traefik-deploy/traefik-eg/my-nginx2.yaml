@@ -1,14 +1,14 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: my-nginx
+  name: my-nginx2
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
-        run: my-nginx
-        app: my-nginx
+        run: my-nginx2
+        app: my-nginx2
     spec:
       containers:
       - name: nginx
@@ -19,10 +19,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-nginx
+  name: my-nginx2
 spec:
   selector:
-    run: my-nginx
+    run: my-nginx2
   ports:
   - protocol: TCP
     port: 80
