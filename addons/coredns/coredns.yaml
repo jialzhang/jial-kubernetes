@@ -138,6 +138,9 @@ spec:
             items:
             - key: Corefile
               path: Corefile
+      nodeSelector:
+        dns: coredns
+
 ---
 apiVersion: v1
 kind: Service
